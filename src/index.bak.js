@@ -29,45 +29,59 @@ class Welcome extends React.Component {
 }
 
 // 测试3 , 生命周期
+
 class Counter extends React.Component {
+
+
   constructor(props) {
     super(props); // 调用基类的构造方法初始化props
     this.state = {
-      num: 0,
+      num: 11,
     }
   }
 
   componentWillUpdate() {
-    console.log(`componentWillUpdate`);
-  }
-
-  componentDidUpdate() {
-    console.log(`componentDidUpdate`);
+    console.log("update");
   }
 
   componentWillMount() {
-    console.log("componentWillMount");
+    console.log("mount");
   }
 
-  componentDidMount() {
-    console.log("componentDidMount");
-  }
-
-
+  // onClick() {
+  //   console.log("click");
+  //   this.setState( { num: this.state.num + 1 } );
+  // }
   clicked() {
-    console.log(`render clicked, old state num: ${this.state.num}`);
-    this.setState( { num: this.state.num + 1 });
-    console.log(`updated state num: ${this.state.num}`);
+    console.log("clicked");
   }
+
 
   render() {
+    // function onClick() {
+    //   console.log("click");
+    //   this.setState( { num: this.state.num + 1 } );
+    // }
+    function clicked() {
+      console.log("render clicked");
+    }
+
     return (
-      <div onClick={ () => this.clicked() }>
+      <div onClick={ this.clicked }>
         <h1>number: {this.state.num}</h1>
         <button>add</button>
       </div>
     );
   }
+
+  // render() {
+  //   return (
+  //     <div onClick={() => self.onClick()}>
+  //       <h1>counter: {self.state.num}</h1>
+  //       <button >add</button>
+  //     </div>
+  //   );
+  // }
 }
 
 ReactDOM.render(

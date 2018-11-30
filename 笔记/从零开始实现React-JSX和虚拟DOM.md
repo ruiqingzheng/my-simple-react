@@ -26,7 +26,7 @@ const title = React.createElement(
 
 启动parcelweb服务器调试: `parcel index.html`
 
-创建基本的app目录结构: 新建`src/index.js`和`index.html`，在`index.html`中引入`index.js` 就像使用react
+创建基本的app目录结构: 新建`src/index.bak.js`和`index.html`，在`index.html`中引入`index.bak.js` 就像使用react
 
 ## 使用`babel-plugin-transform-react-jsx` 来解析jsx为虚拟DOM
 
