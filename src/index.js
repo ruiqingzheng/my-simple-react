@@ -64,7 +64,7 @@ class Counter extends React.Component {
     return (
       <div onClick={ () => this.clicked() }>
         <h1>number: {this.state.num}</h1>
-        <button>add</button>
+        <button><span style="color: red">add</span></button>
       </div>
     );
   }
